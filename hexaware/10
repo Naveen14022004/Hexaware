@@ -1,0 +1,40 @@
+#include<stdio.h>
+
+int main()
+{
+   int n,i;
+   printf("Enter Size of Array : ");
+   scanf("%d",&n);
+   int array[n];
+   printf("Enter Array Elements : ");
+   for(i=0;i<n;i++)
+   {
+      scanf("%d",&array[i]);
+   }
+
+   int ele;
+   printf("Enter the Element to be removed : ");
+   scanf("%d",&ele);
+
+   int pos;
+   for(i=0;i<n;i++)
+   {
+      if(array[i] == ele)
+      {
+         pos = i;
+         break;
+      }
+   }
+   for(i=pos;i<n;i++)
+   {
+      array[i] = array[i+1];
+   }
+   printf("Resultant Array : ");
+   for(i=0;i<n-1;i++)
+   {
+      printf("%d",array[i]);
+   }
+   printf("\n");
+   return 0;
+}
+
